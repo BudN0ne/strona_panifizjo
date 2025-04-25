@@ -1,0 +1,194 @@
+INSTRUKCJA INSTALACJI I URUCHOMIENIA STRONY INTERNETOWEJ
+=================================================
+
+1. INSTALACJA NODE.JS
+-------------------
+a) Wejdź na stronę https://nodejs.org/
+b) Kliknij duży zielony przycisk "Download" po lewej stronie (wersja LTS)
+c) Uruchom pobrany plik instalacyjny
+d) Klikaj "Next" we wszystkich krokach instalacji
+e) Na końcu kliknij "Finish"
+
+2. PRZYGOTOWANIE FOLDERU ZE STRONĄ
+--------------------------------
+a) Wybierz miejsce na dysku, gdzie chcesz zainstalować stronę
+b) Stwórz tam nowy folder dla projektu
+c) Skopiuj do niego wszystkie pliki i foldery ze strony:
+   - folder z widokami (views)
+   - folder z plikami publicznymi (public)
+   - plik główny aplikacji (app.js)
+   - plik konfiguracyjny (package.json)
+
+3. KONFIGURACJA POCZTY
+--------------------
+a) W głównym folderze projektu stwórz nowy plik o nazwie ".env"
+b) Otwórz go w Notatniku
+c) Wpisz w nim (zamień na swoje dane):
+   EMAIL_USER=twoj.email@gmail.com
+   EMAIL_PASS=twoje_haslo_do_aplikacji
+d) Zapisz plik
+
+4. INSTALACJA POTRZEBNYCH PAKIETÓW
+-------------------------------
+a) Otwórz "Wiersz polecenia" (cmd):
+   - Naciśnij klawisz Windows + R
+   - Wpisz "cmd" i naciśnij Enter
+b) W oknie wiersza poleceń:
+   - Przejdź do dysku, gdzie zainstalowałeś stronę (np. wpisz "c:" lub "d:")
+   - Przejdź do folderu projektu używając komendy "cd" i ścieżki do folderu
+   - Wpisz: npm install
+c) Poczekaj aż instalacja się zakończy (może potrwać kilka minut)
+
+5. URUCHOMIENIE STRONY
+--------------------
+a) W tym samym oknie wiersza poleceń wpisz:
+   npm start
+b) Jeśli wszystko poszło dobrze, zobaczysz komunikat "Serwer działa na porcie 3000"
+
+6. OTWORZENIE STRONY W PRZEGLĄDARCE
+--------------------------------
+a) Otwórz przeglądarkę internetową (np. Chrome, Firefox)
+b) W pasku adresu wpisz:
+   http://localhost:3000
+c) Naciśnij Enter
+
+WYŁĄCZANIE STRONY
+----------------
+1. Wróć do okna wiersza poleceń
+2. Naciśnij Ctrl + C
+3. Wpisz "y" i naciśnij Enter
+
+PONOWNE URUCHOMIENIE STRONY
+-------------------------
+1. Otwórz wiersz poleceń
+2. Przejdź do folderu projektu
+3. Wpisz: npm start
+
+WAŻNE UWAGI
+----------
+- Nie zamykaj okna wiersza poleceń gdy strona jest uruchomiona
+- Upewnij się że wszystkie pliki są we właściwych folderach
+- Sprawdź czy masz połączenie z internetem
+- Jeśli widzisz jakieś błędy:
+  * Zrób zdjęcie ekranu z błędem
+  * Lub skopiuj tekst błędu
+  * Zapisz te informacje - będą potrzebne do rozwiązania problemu
+
+ROZWIĄZYWANIE PROBLEMÓW
+---------------------
+1. Jeśli pojawia się błąd "npm nie jest rozpoznawane jako polecenie":
+   - Upewnij się, że Node.js został poprawnie zainstalowany
+   - Spróbuj ponownie uruchomić komputer
+
+2. Jeśli strona nie otwiera się w przeglądarce:
+   - Sprawdź czy w wierszu poleceń widać komunikat o działającym serwerze
+   - Upewnij się, że wpisujesz dokładnie http://localhost:3000
+
+3. Jeśli formularz kontaktowy nie działa:
+   - Sprawdź czy plik .env został utworzony
+   - Upewnij się, że dane w pliku .env są poprawne
+
+KONTAKT W RAZIE PROBLEMÓW
+-----------------------
+Jeśli pojawią się problemy z instalacją lub uruchomieniem strony:
+1. Zapisz dokładny komunikat błędu
+2. Zrób zdjęcie ekranu z błędem
+3. Opisz, w którym kroku instalacji wystąpił problem
+4. Skontaktuj się ze mną :)
+
+KONFIGURACJA NA HOSTINGU
+----------------------
+1. WYMAGANIA HOSTINGU
+   - Hosting z obsługą Node.js
+   - Dostęp przez SSH lub FTP
+   - Możliwość uruchomienia aplikacji Node.js jako usługi
+   - Dostęp do konfiguracji domen/subdomen
+
+2. PRZYGOTOWANIE PLIKÓW
+   a) Spakuj wszystkie pliki projektu do archiwum ZIP
+   b) Usuń folder node_modules przed spakowaniem
+   c) Upewnij się, że plik .env nie jest dołączony do archiwum
+
+3. WGRYWANIE NA HOSTING
+   a) Zaloguj się do panelu hostingu
+   b) Przejdź do menedżera plików lub połącz się przez FTP
+   c) Wgraj spakowane pliki
+   d) Rozpakuj archiwum na serwerze
+
+4. KONFIGURACJA NODE.JS NA HOSTINGU
+   a) Połącz się z serwerem przez SSH lub terminal w panelu
+   b) Przejdź do folderu z projektem
+   c) Wykonaj komendę: npm install
+   d) Utwórz plik .env i skonfiguruj zmienne środowiskowe:
+      EMAIL_USER=twoj.email@gmail.com
+      EMAIL_PASS=twoje_haslo_do_aplikacji
+      PORT=numer_portu_przydzielony_przez_hosting
+
+5. URUCHOMIENIE APLIKACJI
+   a) Zainstaluj PM2 (menedżer procesów):
+      npm install -g pm2
+   b) Uruchom aplikację:
+      pm2 start app.js --name "nazwa_twojej_aplikacji"
+   c) Zapisz konfigurację PM2:
+      pm2 save
+
+6. KONFIGURACJA DOMENY
+   a) W panelu hostingu przejdź do ustawień domen
+   b) Dodaj nową domenę lub subdomenę
+   c) Skonfiguruj przekierowanie na port aplikacji
+   d) Poczekaj na propagację DNS (może potrwać do 24h)
+
+7. KONFIGURACJA REVERSE PROXY (jeśli wymagane)
+   a) W panelu hostingu znajdź ustawienia Nginx/Apache
+   b) Dodaj konfigurację reverse proxy:
+      ```nginx
+      location / {
+          proxy_pass http://localhost:PORT;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection 'upgrade';
+          proxy_set_header Host $host;
+          proxy_cache_bypass $http_upgrade;
+      }
+      ```
+   c) Zastąp PORT numerem portu Twojej aplikacji
+
+8. ZABEZPIECZENIA
+   a) Skonfiguruj certyfikat SSL (Let's Encrypt)
+   b) Ustaw przekierowanie HTTP na HTTPS
+   c) Skonfiguruj firewall, aby blokował wszystkie porty oprócz 80 i 443
+
+MONITOROWANIE I UTRZYMANIE
+-------------------------
+1. Sprawdzanie statusu aplikacji:
+   pm2 status
+
+2. Przeglądanie logów:
+   pm2 logs
+
+3. Restart aplikacji:
+   pm2 restart nazwa_twojej_aplikacji
+
+4. Aktualizacja aplikacji:
+   a) Zatrzymaj aplikację: pm2 stop nazwa_twojej_aplikacji
+   b) Wgraj nowe pliki
+   c) Wykonaj npm install (jeśli były zmiany w zależnościach)
+   d) Uruchom ponownie: pm2 start nazwa_twojej_aplikacji
+
+ROZWIĄZYWANIE PROBLEMÓW NA HOSTINGU
+--------------------------------
+1. Jeśli aplikacja nie uruchamia się:
+   - Sprawdź logi: pm2 logs
+   - Upewnij się, że wszystkie zależności są zainstalowane
+   - Sprawdź uprawnienia do plików i folderów
+
+2. Jeśli strona nie jest dostępna:
+   - Sprawdź konfigurację domeny
+   - Upewnij się, że aplikacja działa (pm2 status)
+   - Sprawdź konfigurację reverse proxy
+   - Sprawdź firewall i porty
+
+3. Jeśli występują błędy 502/504:
+   - Sprawdź czy aplikacja nie jest przeciążona
+   - Zwiększ limit pamięci w PM2
+   - Sprawdź logi serwera 

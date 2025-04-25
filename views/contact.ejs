@@ -1,0 +1,48 @@
+<%
+const content = `
+<section class="contact-section">
+    <div class="container">
+        <h2>Skontaktuj się ze mną</h2>
+        <div class="contact-content">
+            <div class="contact-form">
+                <form action="/send-message" method="POST">
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Temat</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Dane kontaktowe</h3>
+                <p><i class="fas fa-envelope"></i> Email: kontakt@panifizjoterapeutka.pl</p>
+                <div class="social-links">
+                    <a href="${socialLinks.instagram}" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="${socialLinks.tiktok}" class="social-link" target="_blank">
+                        <i class="fab fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="${socialLinks.youtube}" class="social-link" target="_blank">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', {title: title, socialLinks: socialLinks, content: content}) %> 

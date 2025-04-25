@@ -1,0 +1,138 @@
+<%
+const content = `
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Witaj w świecie profesjonalnej fizjoterapii!</h1>
+            <p>Jestem fizjoterapeutką z pasją, która dzieli się swoją wiedzą i doświadczeniem w mediach społecznościowych. Pomagam ludziom zrozumieć ich ciało i pokazuję, jak dbać o zdrowie w codziennym życiu. Dołącz do mojej społeczności i odkryj tajniki zdrowego ruchu!</p>
+            <div class="social-links">
+                <a href="${socialLinks.instagram}" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="${socialLinks.tiktok}" class="social-link" target="_blank">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="${socialLinks.youtube}" class="social-link" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="o-mnie" class="about-section">
+    <div class="container">
+        <h2>O Mnie</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Jestem dyplomowaną fizjoterapeutką z wieloletnim doświadczeniem w pracy z pacjentami. Moją misją jest edukacja i pomoc w zrozumieniu funkcjonowania ludzkiego ciała. W mediach społecznościowych dzielę się praktycznymi poradami, ćwiczeniami i ciekawostkami z zakresu fizjoterapii.</p>
+                <p>Moje treści są skierowane zarówno do osób, które chcą zadbać o swoje zdrowie, jak i do tych, którzy zmagają się z różnymi dolegliwościami. Staram się pokazywać, że fizjoterapia może być ciekawa i przystępna dla każdego!</p>
+                <div class="achievements">
+                    <div class="achievement">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>10+ lat doświadczenia</span>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-users"></i>
+                        <span>1000+ zadowolonych pacjentów</span>
+                    </div>
+                    <div class="achievement">
+                        <i class="fas fa-video"></i>
+                        <span>500+ filmów edukacyjnych</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="/images/profile.jpg" alt="Pani Fizjoterapeutka" class="profile-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="uslugi" class="services-section">
+    <div class="container">
+        <h2>Moje Usługi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h3>Treści Wideo</h3>
+                <p>Regularne filmy edukacyjne na YouTube i TikTok z ćwiczeniami i poradami. Od prostych rozciągań po zaawansowane techniki terapeutyczne.</p>
+                <a href="${socialLinks.youtube}" class="service-link" target="_blank">Obejrzyj filmy</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-comments"></i>
+                <h3>Konsultacje Online</h3>
+                <p>Indywidualne porady i konsultacje przez Internet. Pomogę Ci dobrać odpowiednie ćwiczenia i techniki terapeutyczne.</p>
+                <a href="/kontakt" class="service-link">Umów konsultację</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-book"></i>
+                <h3>Edukacja</h3>
+                <p>Warsztaty i szkolenia z zakresu fizjoterapii. Nauczę Cię, jak dbać o swoje ciało i zapobiegać kontuzjom.</p>
+                <a href="/kontakt" class="service-link">Dowiedz się więcej</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="gallery-section">
+    <div class="container">
+        <h2>Najpopularniejsze filmy</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/9MTOi3dSYlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/F203R6izXSw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="gallery-item">
+                <iframe src="https://www.youtube.com/embed/VmIM2jVzkBI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="cta-section">
+            <h3>Chcesz zobaczyć więcej?</h3>
+            <p>Zasubskrybuj mój kanał YouTube i bądź na bieżąco z nowymi filmami!</p>
+            <div class="youtube-subscribe">
+                <a href="${socialLinks.youtube}" class="youtube-subscribe-btn" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    Zasubskrybuj kanał
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="container">
+        <h2>Co mówią o mnie pacjenci</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Dzięki ćwiczeniom pokazanym przez Panią Fizjoterapeutkę pozbyłam się bólu pleców, który towarzyszył mi od lat!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="/images/testimonial1.jpg" alt="Anna K.">
+                    <div>
+                        <h4>Anna K.</h4>
+                        <span>Pacjentka</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Profesjonalne podejście i świetne wyjaśnienia. W końcu zrozumiałem, jak prawidłowo wykonywać ćwiczenia!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="/images/testimonial2.jpg" alt="Marek W.">
+                    <div>
+                        <h4>Marek W.</h4>
+                        <span>Pacjent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', {title: title, socialLinks: socialLinks, content: content}) %> 

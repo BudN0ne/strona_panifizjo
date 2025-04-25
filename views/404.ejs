@@ -1,0 +1,17 @@
+<%
+const content = `
+<section class="error-section">
+    <div class="container">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Ups! Strona nie została znaleziona</h2>
+            <p>Przepraszamy, ale strona której szukasz nie istnieje lub została przeniesiona.</p>
+            <a href="/" class="service-link">
+                <i class="fas fa-home"></i> Wróć do strony głównej
+            </a>
+        </div>
+    </div>
+</section>
+`;
+%>
+<%- include('layout', {title: title, content: content}) %> 
