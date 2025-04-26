@@ -1,0 +1,96 @@
+INSTRUKCJA WDROŻENIA STRONY NA RENDER
+====================================
+
+1. PRZYGOTOWANIE KONTA NA RENDER
+--------------------------------
+a) Otwórz przeglądarkę internetową (np. Chrome)
+b) Wejdź na stronę: https://render.com
+c) Kliknij "Sign Up" (Zarejestruj się) w prawym górnym rogu
+d) Zarejestruj się używając swojego adresu email lub konta GitHub
+e) Potwierdź rejestrację klikając w link w emailu
+
+2. PRZYGOTOWANIE PLIKÓW
+---------------------
+a) Upewnij się, że masz wszystkie pliki strony w jednym folderze
+b) Sprawdź czy masz:
+   * folder `views`
+   * folder `public`
+   * plik `app.js`
+   * plik `package.json`
+   * plik `.env`
+
+3. UTWORZENIE NOWEGO PROJEKTU
+---------------------------
+a) Po zalogowaniu do Render, kliknij "New +" w prawym górnym rogu
+b) Wybierz "Web Service"
+c) Jeśli masz konto GitHub, możesz połączyć je z Render
+d) Wybierz repozytorium z Twoją stroną (lub utwórz nowe)
+
+4. KONFIGURACJA USŁUGI
+--------------------
+a) W polu "Name" wpisz nazwę Twojej strony (np. "moja-strona")
+b) W polu "Environment" wybierz "Node"
+c) W polu "Build Command" wpisz: `npm install`
+d) W polu "Start Command" wpisz: `node app.js`
+e) W sekcji "Environment Variables" dodaj:
+   * Kliknij "Add Environment Variable"
+   * Wpisz nazwę: `EMAIL_USER`
+   * Wpisz wartość: Twój adres email Gmail
+   * Kliknij "Add Environment Variable" ponownie
+   * Wpisz nazwę: `EMAIL_PASS`
+   * Wpisz wartość: Twoje hasło do aplikacji Gmail
+f) W sekcji "Plan" wybierz "Free"
+
+5. WDROŻENIE
+-----------
+a) Kliknij "Create Web Service"
+b) Poczekaj aż Render zainstaluje wszystkie potrzebne pliki
+c) Proces może zająć kilka minut
+d) Gdy zobaczysz zielony znacznik "Live", Twoja strona jest gotowa
+
+6. KONFIGURACJA DOMENY
+--------------------
+a) W panelu Render kliknij na Twoją usługę
+b) Przejdź do zakładki "Settings"
+c) W sekcji "Custom Domains" kliknij "Add Custom Domain"
+d) Wpisz swoją domenę (np. "mojastrona.pl")
+e) Postępuj zgodnie z instrukcjami Render, aby skonfigurować DNS
+
+7. SPRAWDZENIE DZIAŁANIA
+----------------------
+a) Otwórz przeglądarkę
+b) Wpisz adres Twojej strony (np. "mojastrona.pl")
+c) Sprawdź czy:
+   * Strona się ładuje
+   * Formularz kontaktowy działa
+   * Wszystkie linki działają
+
+8. WAŻNE UWAGI
+------------
+- Nie zamykaj przeglądarki podczas wdrażania
+- Jeśli coś nie działa, sprawdź logi w panelu Render
+- Pamiętaj, że w darmowej wersji strona może "zasypiać" po okresie bezczynności
+- Pierwsze uruchomienie po "uśpieniu" może trwać dłużej
+
+9. ROZWIĄZYWANIE PROBLEMÓW
+------------------------
+Jeśli coś nie działa:
+a) Sprawdź logi w panelu Render
+b) Upewnij się, że wszystkie zmienne środowiskowe są poprawnie ustawione
+c) Sprawdź czy wszystkie pliki zostały poprawnie wdrożone
+d) Jeśli potrzebujesz pomocy, możesz skontaktować się z supportem Render
+
+10. AKTUALIZACJA STRONY
+---------------------
+a) Jeśli chcesz zaktualizować stronę:
+   * Wprowadź zmiany w plikach lokalnie
+   * Wgraj zmiany do repozytorium GitHub
+   * Render automatycznie wykryje zmiany i zaktualizuje stronę
+
+KONTAKT W RAZIE PROBLEMÓW
+------------------------
+Jeśli pojawią się problemy z wdrożeniem strony:
+1. Zapisz dokładny komunikat błędu
+2. Zrób zdjęcie ekranu z błędem
+3. Opisz, w którym kroku wdrożenia wystąpił problem
+4. Skontaktuj się ze mną :) 

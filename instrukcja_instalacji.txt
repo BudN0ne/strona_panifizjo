@@ -21,9 +21,9 @@ c) Skopiuj do niego wszystkie pliki i foldery ze strony:
 
 3. KONFIGURACJA POCZTY
 --------------------
-a) W głównym folderze projektu stwórz nowy plik o nazwie ".env"
+a) W głównym folderze projektu stwórz nowy plik o nazwie ".env" (już jest)
 b) Otwórz go w Notatniku
-c) Wpisz w nim (zamień na swoje dane):
+c) Wpisz w nim (zamień na swoje dane poczty gmail):
    EMAIL_USER=twoj.email@gmail.com
    EMAIL_PASS=twoje_haslo_do_aplikacji
 d) Zapisz plik
